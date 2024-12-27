@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck2ga6aaikidj"
-path.bptc="res://.godot/imported/coast_sand_rocks_02_rough_1k.exr-6af4fd859258c6ab8ba8ec4525aed844.bptc.ctex"
+uid="uid://bgc5rl13dopuj"
+path.s3tc="res://.godot/imported/sky_2.png-3246d9ba45b69131effdf515c69428b4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/textures/grass/coast_sand_rocks_02_rough_1k.exr"
-dest_files=["res://.godot/imported/coast_sand_rocks_02_rough_1k.exr-6af4fd859258c6ab8ba8ec4525aed844.bptc.ctex"]
+source_file="res://addons/proton_scatter/demos/assets/textures/sky_2.png"
+dest_files=["res://.godot/imported/sky_2.png-3246d9ba45b69131effdf515c69428b4.s3tc.ctex"]
 
 [params]
 
