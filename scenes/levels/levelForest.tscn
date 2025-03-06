@@ -31,7 +31,7 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.075
 volumetric_fog_albedo = Color(0.877616, 0.877616, 0.877616, 1)
 
-[sub_resource type="Resource" id="Resource_gn8qg"]
+[sub_resource type="Resource" id="Resource_8kmmw"]
 script = ExtResource("5_etdxp")
 amount = 500
 enabled = true
@@ -40,7 +40,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_bfufk"]
+[sub_resource type="Resource" id="Resource_gbjlh"]
 script = ExtResource("6_255gl")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(5, 360, 5)
@@ -51,7 +51,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_y57dk"]
+[sub_resource type="Resource" id="Resource_w8imq"]
 script = ExtResource("7_hr6vy")
 iterations = 3
 offset_step = 0.2
@@ -63,7 +63,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_w6l6i"]
+[sub_resource type="Resource" id="Resource_srp2f"]
 script = ExtResource("8_3fvjp")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 5.0
@@ -79,9 +79,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_0gd8j"]
+[sub_resource type="Resource" id="Resource_n1ono"]
 script = ExtResource("3_wnaoh")
-stack = Array[ExtResource("4_qaxtq")]([SubResource("Resource_gn8qg"), SubResource("Resource_bfufk"), SubResource("Resource_y57dk"), SubResource("Resource_w6l6i")])
+stack = Array[ExtResource("4_qaxtq")]([SubResource("Resource_8kmmw"), SubResource("Resource_gbjlh"), SubResource("Resource_w8imq"), SubResource("Resource_srp2f")])
 
 [sub_resource type="Resource" id="Resource_3wu64"]
 script = ExtResource("11_rcmly")
@@ -91,7 +91,7 @@ size = Vector3(30, 1, 30)
 script = ExtResource("11_jg51a")
 radius = 6.35068
 
-[sub_resource type="Resource" id="Resource_a8141"]
+[sub_resource type="Resource" id="Resource_ch0vp"]
 script = ExtResource("5_etdxp")
 amount = 15
 enabled = true
@@ -100,7 +100,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_mhoal"]
+[sub_resource type="Resource" id="Resource_4ygl7"]
 script = ExtResource("6_255gl")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(5, 360, 5)
@@ -111,7 +111,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_7tk4e"]
+[sub_resource type="Resource" id="Resource_kormj"]
 script = ExtResource("7_hr6vy")
 iterations = 3
 offset_step = 0.2
@@ -123,7 +123,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_w0bu2"]
+[sub_resource type="Resource" id="Resource_dmgll"]
 script = ExtResource("8_3fvjp")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 5.0
@@ -139,9 +139,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_e4l2w"]
+[sub_resource type="Resource" id="Resource_1db0n"]
 script = ExtResource("3_wnaoh")
-stack = Array[ExtResource("4_qaxtq")]([SubResource("Resource_a8141"), SubResource("Resource_mhoal"), SubResource("Resource_7tk4e"), SubResource("Resource_w0bu2")])
+stack = Array[ExtResource("4_qaxtq")]([SubResource("Resource_ch0vp"), SubResource("Resource_4ygl7"), SubResource("Resource_kormj"), SubResource("Resource_dmgll")])
 
 [sub_resource type="Resource" id="Resource_v34lc"]
 script = ExtResource("11_jg51a")
@@ -174,7 +174,7 @@ metadata/_edit_group_ = true
 [node name="ProtonScatter" type="Node3D" parent="map/floor"]
 script = ExtResource("2_fa8rl")
 keep_static_colliders = true
-modifier_stack = SubResource("Resource_0gd8j")
+modifier_stack = SubResource("Resource_n1ono")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
@@ -206,7 +206,7 @@ shape = SubResource("Resource_ia2ut")
 
 [node name="ProtonScatter2" type="Node3D" parent="map/floor"]
 script = ExtResource("2_fa8rl")
-modifier_stack = SubResource("Resource_e4l2w")
+modifier_stack = SubResource("Resource_1db0n")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
