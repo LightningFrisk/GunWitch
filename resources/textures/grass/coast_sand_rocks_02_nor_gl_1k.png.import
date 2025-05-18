@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhnukglswft0u"
+uid="uid://d23851macsds5"
 path.s3tc="res://.godot/imported/coast_sand_rocks_02_nor_gl_1k.png-4e600174fcbf57d39adc46398df58d2e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -24,8 +24,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://resources/textures/grass/coast_sand_rocks_02_nor_gl_1k.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
