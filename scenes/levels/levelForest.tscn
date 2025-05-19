@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="10_nuked"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="11_0g3jq"]
 
-[sub_resource type="Resource" id="Resource_4aa07"]
+[sub_resource type="Resource" id="Resource_npusq"]
 script = ExtResource("5_c1ije")
 amount = 500
 enabled = true
@@ -22,7 +22,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_v8kxo"]
+[sub_resource type="Resource" id="Resource_ooeb3"]
 script = ExtResource("6_rfxv3")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(5, 360, 5)
@@ -33,7 +33,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_fwmf8"]
+[sub_resource type="Resource" id="Resource_8igat"]
 script = ExtResource("7_6b2si")
 iterations = 3
 offset_step = 0.2
@@ -45,7 +45,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_nkti8"]
+[sub_resource type="Resource" id="Resource_w3w4q"]
 script = ExtResource("8_431gt")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 5.0
@@ -61,9 +61,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_4wh0a"]
+[sub_resource type="Resource" id="Resource_vlonu"]
 script = ExtResource("3_oirqq")
-stack = Array[ExtResource("4_kiu0o")]([SubResource("Resource_4aa07"), SubResource("Resource_v8kxo"), SubResource("Resource_fwmf8"), SubResource("Resource_nkti8")])
+stack = Array[ExtResource("4_kiu0o")]([SubResource("Resource_npusq"), SubResource("Resource_ooeb3"), SubResource("Resource_8igat"), SubResource("Resource_w3w4q")])
 
 [sub_resource type="Resource" id="Resource_xlq1d"]
 script = ExtResource("11_0g3jq")
@@ -76,7 +76,7 @@ material_override = ExtResource("2_6ay7j")
 
 [node name="ProtonScatter" type="Node3D" parent="map/floor" index="0"]
 script = ExtResource("2_138tb")
-modifier_stack = SubResource("Resource_4wh0a")
+modifier_stack = SubResource("Resource_vlonu")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MovementState" load_steps=2 format=3 uid="uid://ciuooockwpr46"]
+
+[ext_resource type="Script" path="res://scripts/MovementStates/movement_state.gd" id="1_aiuxh"]
+
+[resource]
+script = ExtResource("1_aiuxh")
+id = 0
+movement_speed = 0.0
+acceleration = 6.0
+camera_fov = 75.0
+animation_speed = 1.0

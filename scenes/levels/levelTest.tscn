@@ -13,7 +13,7 @@ albedo_texture = ExtResource("4_kmuw5")
 [node name="world" instance=ExtResource("1_ibf6m")]
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="map" index="1"]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -1.24785, 1, 4.31932)
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -1.24785, 1, -1.68068)
 material_override = SubResource("StandardMaterial3D_kqfbb")
 use_collision = true
 size = Vector3(2, 2, 2)
