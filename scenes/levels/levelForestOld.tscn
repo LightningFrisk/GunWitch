@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://kca13gbrvtdy"]
 
-[ext_resource type="Script" path="res://scenes/levels/level_forest.gd" id="1_2ypr2"]
+[ext_resource type="Script" path="res://scripts/level_forest.gd" id="1_2ypr2"]
 [ext_resource type="Material" uid="uid://cbotx0umrwci4" path="res://materials/grass.tres" id="2_bds80"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="3_3bwwl"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="4_gky2e"]

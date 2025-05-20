@@ -23,3 +23,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5221, 1.5, -0.134627)
 material_override = SubResource("StandardMaterial3D_fnbao")
 use_collision = true
 size = Vector3(3, 3, 3)
+
+[node name="Player" parent="." index="3"]
+movement_states = {}

@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://dc2xtabtycryt"]
 
 [ext_resource type="Texture2D" uid="uid://c3ehe11tjx6b4" path="res://resources/textures/Kenney/PNG/Dark/texture_05.png" id="1_321j3"]
-[ext_resource type="Script" path="res://scenes/levels/player.gd" id="2_ro8cg"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_ro8cg"]
 [ext_resource type="PackedScene" uid="uid://dp6xni4tvlu4e" path="res://scenes/characters/Godot_Chan_Stealth.tscn" id="2_xq6fy"]
 [ext_resource type="Resource" uid="uid://ciuooockwpr46" path="res://scripts/MovementStates/stand.tres" id="3_ew7h5"]
 [ext_resource type="Script" path="res://scripts/camera_controller.gd" id="3_uxcjo"]
 [ext_resource type="Resource" uid="uid://dfq5btpdgv83x" path="res://scripts/MovementStates/walk.tres" id="4_60hnv"]
 [ext_resource type="Resource" uid="uid://b1cpviql12u8x" path="res://scripts/MovementStates/run.tres" id="5_qnn4n"]
 [ext_resource type="Resource" uid="uid://cm8768ml2jdro" path="res://scripts/MovementStates/sprint.tres" id="6_ekkhk"]
-[ext_resource type="Script" path="res://scenes/levels/movementcontroller.gd" id="7_qiwk6"]
+[ext_resource type="Script" path="res://scripts/movementcontroller.gd" id="7_qiwk6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ymw4m"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -64,8 +64,10 @@ movement_states = {
 "walk": ExtResource("4_60hnv")
 }
 
-[node name="movementcontroller" type="Node" parent="Player"]
+[node name="movementcontroller" type="Node" parent="Player" node_paths=PackedStringArray("player", "mesh_root")]
 script = ExtResource("7_qiwk6")
+player = NodePath("..")
+mesh_root = NodePath("../MeshRoot")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
@@ -74,7 +76,6 @@ shape = SubResource("CapsuleShape3D_qryng")
 [node name="MeshRoot" type="Node3D" parent="Player"]
 
 [node name="Godot_Chan_Stealth2" parent="Player/MeshRoot" instance=ExtResource("2_xq6fy")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CamRoot" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40823, 0)
@@ -89,3 +90,7 @@ shape = SubResource("SphereShape3D_aee66")
 spring_length = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="Player/CamRoot/CamYaw/CamPitch/SpringArm3D"]
+
+[connection signal="set_movement_direction" from="Player" to="Player/movementcontroller" method="_on_set_movement_direction"]
+[connection signal="set_movement_state" from="Player" to="Player/movementcontroller" method="_on_set_movement_state"]
+[connection signal="set_cam_rotation" from="Player/CamRoot" to="Player/movementcontroller" method="_on_set_cam_rotation"]
