@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dc2xtabtycryt"]
+[gd_scene load_steps=16 format=3 uid="uid://dc2xtabtycryt"]
 
 [ext_resource type="Texture2D" uid="uid://c3ehe11tjx6b4" path="res://resources/textures/Kenney/PNG/Dark/texture_05.png" id="1_321j3"]
 [ext_resource type="Script" path="res://scenes/levels/player.gd" id="2_ro8cg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://dfq5btpdgv83x" path="res://scripts/MovementStates/walk.tres" id="4_60hnv"]
 [ext_resource type="Resource" uid="uid://b1cpviql12u8x" path="res://scripts/MovementStates/run.tres" id="5_qnn4n"]
 [ext_resource type="Resource" uid="uid://cm8768ml2jdro" path="res://scripts/MovementStates/sprint.tres" id="6_ekkhk"]
+[ext_resource type="Script" path="res://scenes/levels/movementcontroller.gd" id="7_qiwk6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ymw4m"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -62,6 +63,9 @@ movement_states = {
 "stand": ExtResource("3_ew7h5"),
 "walk": ExtResource("4_60hnv")
 }
+
+[node name="movementcontroller" type="Node" parent="Player"]
+script = ExtResource("7_qiwk6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
