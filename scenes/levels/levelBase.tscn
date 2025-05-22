@@ -78,7 +78,7 @@ shape = SubResource("CapsuleShape3D_qryng")
 [node name="Godot_Chan_Stealth2" parent="Player/MeshRoot" instance=ExtResource("2_xq6fy")]
 
 [node name="CamRoot" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40823, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.40823, 0)
 script = ExtResource("3_uxcjo")
 
 [node name="CamYaw" type="Node3D" parent="Player/CamRoot"]
@@ -93,4 +93,5 @@ spring_length = 2.0
 
 [connection signal="set_movement_direction" from="Player" to="Player/movementcontroller" method="_on_set_movement_direction"]
 [connection signal="set_movement_state" from="Player" to="Player/movementcontroller" method="_on_set_movement_state"]
+[connection signal="set_movement_state" from="Player" to="Player/CamRoot" method="_on_set_movement_state"]
 [connection signal="set_cam_rotation" from="Player/CamRoot" to="Player/movementcontroller" method="_on_set_cam_rotation"]

@@ -8,7 +8,7 @@ signal set_movement_direction(_movement_direction : Vector3)
 var movement_direction : Vector3
 
 func _input(event):
-	if event.is_action("movement"): #this function determines movement direction, functions as left + right pressed as neutral
+	if event.is_action("movement") or event.is_action_released("movement"): #this function determines movement direction, functions as left + right pressed as neutral
 		movement_direction.x = Input.get_action_strength("left") - Input.get_action_strength("right")
 		movement_direction.z = Input.get_action_strength("forward") - Input.get_action_strength("back")
 		
@@ -20,6 +20,8 @@ func _input(event):
 					set_movement_state.emit(movement_states["walk"])
 				else:
 					set_movement_state.emit(movement_states["run"])
+		else:
+			set_movement_state.emit(movement_states["stand"])
 
 func _ready(): #by default sets to standing
 	set_movement_state.emit(movement_states["stand"])
