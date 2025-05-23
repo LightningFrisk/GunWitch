@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="10_nuked"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="11_0g3jq"]
 
-[sub_resource type="Resource" id="Resource_npusq"]
+[sub_resource type="Resource" id="Resource_88r3p"]
 script = ExtResource("5_c1ije")
 amount = 500
 enabled = true
@@ -22,7 +22,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_ooeb3"]
+[sub_resource type="Resource" id="Resource_h0k3t"]
 script = ExtResource("6_rfxv3")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(5, 360, 5)
@@ -33,7 +33,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_8igat"]
+[sub_resource type="Resource" id="Resource_vdwi6"]
 script = ExtResource("7_6b2si")
 iterations = 3
 offset_step = 0.2
@@ -45,7 +45,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_w3w4q"]
+[sub_resource type="Resource" id="Resource_oje8t"]
 script = ExtResource("8_431gt")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 5.0
@@ -61,9 +61,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_vlonu"]
+[sub_resource type="Resource" id="Resource_0qvey"]
 script = ExtResource("3_oirqq")
-stack = Array[ExtResource("4_kiu0o")]([SubResource("Resource_npusq"), SubResource("Resource_ooeb3"), SubResource("Resource_8igat"), SubResource("Resource_w3w4q")])
+stack = Array[ExtResource("4_kiu0o")]([SubResource("Resource_88r3p"), SubResource("Resource_h0k3t"), SubResource("Resource_vdwi6"), SubResource("Resource_oje8t")])
 
 [sub_resource type="Resource" id="Resource_xlq1d"]
 script = ExtResource("11_0g3jq")
@@ -76,7 +76,7 @@ material_override = ExtResource("2_6ay7j")
 
 [node name="ProtonScatter" type="Node3D" parent="map/floor" index="0"]
 script = ExtResource("2_138tb")
-modifier_stack = SubResource("Resource_vlonu")
+modifier_stack = SubResource("Resource_0qvey")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
@@ -94,3 +94,23 @@ path = "res://addons/proton_scatter/demos/assets/bush.tscn"
 [node name="ScatterShape" type="Node3D" parent="map/floor/ProtonScatter" index="2"]
 script = ExtResource("10_nuked")
 shape = SubResource("Resource_xlq1d")
+
+[node name="movementcontroller" parent="Player" index="1"]
+rotation_speed = 8.0
+
+[node name="Skeleton3D" parent="Player/MeshRoot/godot_chan_4/Godot_Chan" index="0"]
+bones/0/position = Vector3(-5.8169e-08, -1.09167, -8.90681)
+bones/4/rotation = Quaternion(-0.123223, 2.26689e-10, -3.14832e-10, 0.992379)
+bones/6/rotation = Quaternion(-0.0784214, 0.172042, -0.574939, 0.796051)
+bones/7/rotation = Quaternion(0.28499, -0.455171, -0.173365, 0.825557)
+bones/25/rotation = Quaternion(-0.191436, 0.0946308, 0.56855, 0.794448)
+bones/26/rotation = Quaternion(0.158907, 0.427796, 0.236316, 0.857843)
+bones/43/rotation = Quaternion(0.155432, -6.48928e-10, 1.22505e-09, 0.987847)
+bones/45/rotation = Quaternion(0.93508, 0.176157, -0.284373, -0.117159)
+bones/46/rotation = Quaternion(0.192533, 0.228035, -0.0292086, 0.95398)
+bones/47/rotation = Quaternion(-0.455167, 0.0992768, 0.079382, 0.881287)
+bones/49/rotation = Quaternion(0.869821, -0.236009, 0.317406, -0.294897)
+bones/50/rotation = Quaternion(0.244371, -0.360527, 0.0807146, 0.896543)
+bones/51/rotation = Quaternion(-0.683982, -0.00881533, -0.0675596, 0.726311)
+
+[editable path="Player/MeshRoot/godot_chan_4"]
